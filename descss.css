@@ -1,35 +1,46 @@
+:root {
+    --padding-default: 5px;
+}
+
 * {
     box-sizing: border-box;
-    padding: 5px;
 }
 html, body{
     height: 100vh;
+    padding: var(--padding-default);
 }
 .header {
     font-size: 1.5rem ;
     text-align: center;
     border: dotted black 1px;
+    padding: var(--padding-default);
 }
 .menu {
     text-align: center;
     border: dotted black 1px;
+    padding: var(--padding-default);
 }
 .footer {
     text-align: right;
     border: dotted black 1px;
+    padding: var(--padding-default);
 }
 body {
     margin: 0;
     display: grid;
     grid-template-rows: auto 1fr auto;
     overflow: hidden;
+    row-gap: var(--padding-default);
 }
 .content {
     display: grid;
     grid-template-columns: 30% 1fr;
     min-height: 100%;
+    column-gap: var(--padding-default);
 }
 .article {
     overflow: auto;
     border: dotted black 1px;
+    padding: var(--padding-default);
+    text-align: justify;
 }
