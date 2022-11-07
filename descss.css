@@ -1,8 +1,22 @@
 * {
     box-sizing: border-box;
+    padding: 5px;
 }
 html, body{
     height: 100vh;
+}
+.header {
+    font-size: 1.5rem ;
+    text-align: center;
+    border: dotted black 1px;
+}
+.menu {
+    text-align: center;
+    border: dotted black 1px;
+}
+.footer {
+    text-align: right;
+    border: dotted black 1px;
 }
 body {
     margin: 0;
@@ -17,4 +31,5 @@ body {
 }
 .article {
     overflow: auto;
+    border: dotted black 1px;
 }
