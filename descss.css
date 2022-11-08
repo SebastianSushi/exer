@@ -20,6 +20,24 @@ html, body{
     border: dotted black 1px;
     padding: var(--padding-default);
 }
+.button {
+    height: 20px;
+    width: 100px;
+    border: none;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    color:black;
+    background: lightgreen;
+}
+.button:hover {
+    color:white;
+    background-color: darkgreen ;
+}
+.button:active {
+    color:white;
+    background-color: darkgreen;
+}
 .footer {
     text-align: right;
     border: dotted black 1px;
