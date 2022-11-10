@@ -22,7 +22,8 @@ html, body{
 }
 .button {
     height: 20px;
-    width: 100px;
+    width: 80px;
+    margin: 5px;
     border: none;
     text-align: center;
     transition: all 0.5s;
@@ -37,6 +38,70 @@ html, body{
 .button:active {
     color:white;
     background-color: darkgreen;
+}
+.buttonred {
+    height: 20px;
+    width: 80px;
+    margin: 5px;
+    border: none;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    color:black;
+    background: lightcoral;
+}
+.buttonred:hover {
+    color:white;
+    background-color: darkred;
+}
+.buttonred:active {
+    color:white;
+    background-color: darkred;
+}
+.extension {
+    height: 20px;
+    width: 80px;
+    margin: 5px;
+    border: none;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    color:white;
+    background:blue;
+}
+.extension:hover {
+    color:black;
+    background-color: cyan;
+}
+.extension:active {
+    color:black;
+    background-color: cyan;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropcontent {
+    display: none;
+    position: absolute;
+    background: blue;
+    z-index: 1;
+}
+.dropcontent a {
+    background: blue;
+    color: white;
+    padding: 10px;
+    display: block;
+}
+.dropcontent a:hover {
+    color: black;
+    background: cyan;
+    transition: 0.5s;
+    display: block;
+}
+.dropdown:hover .dropcontent {
+    transition: 0.5s;
+    display: block;
 }
 .footer {
     text-align: right;
@@ -60,5 +125,11 @@ body {
     overflow: auto;
     border: dotted black 1px;
     padding: var(--padding-default);
-    text-align: justify;
+}
+.logpas{
+    height: auto;
+    width:fit-content;
+    border: 2px solid black;
+    padding: var(--padding-default);
+    
 }
