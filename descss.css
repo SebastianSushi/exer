@@ -20,6 +20,15 @@ html, body{
     border: dotted black 1px;
     padding: var(--padding-default);
 }
+.buttonimg {
+    height: 40px;
+    width: 160px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    color:white;
+    background-image: url(buttonimg.jpg) ;
+}
 .button {
     height: 20px;
     width: 80px;
