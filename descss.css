@@ -132,13 +132,15 @@ body {
 }
 .article {
     overflow: auto;
+    display: flex;
+    max-height: 100vh;
     border: dotted black 1px;
     padding: var(--padding-default);
 }
 .logpas{
-    height: auto;
+    height: fit-content;
     width:fit-content;
+    margin: auto;
     border: 2px solid black;
     padding: var(--padding-default);
-    
 }
