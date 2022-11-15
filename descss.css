@@ -20,6 +20,14 @@ html, body{
     border: dotted black 1px;
     padding: var(--padding-default);
 }
+.tear {
+  stroke: cyan;
+  fill: cyan;
+}
+.tearred{
+    stroke: red;
+    fill:red;
+}
 .buttonimg {
     height: 40px;
     width: 160px;
