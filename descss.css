@@ -37,7 +37,18 @@ html, body{
     text-align: center;
     cursor: pointer;
     color:white;
-    background-image: url(buttonimg.jpg) ;
+    background-image: url(buttonimg.jpg);
+}
+.buttonimginvis {
+    height: 40px;
+    width: 160px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    color:white;
+    transition: 3s;
+    background-image: none;
+    background-color: blue;
 }
 .button {
     height: 20px;
@@ -122,7 +133,6 @@ html, body{
     display: block;
 }*/
 .footer {
-    margin-bottom: 5px;
     text-align: right;
     border: dotted black 1px;
     padding: var(--padding-default);
