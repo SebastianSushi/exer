@@ -18,6 +18,8 @@ html, body{
 .menu {
     text-align: center;
     border: dotted black 1px;
+    min-height: 100%;
+    overflow: auto;
     padding: var(--padding-default);
 }
 .tear {
@@ -124,6 +126,9 @@ html, body{
     text-align: right;
     border: dotted black 1px;
     padding: var(--padding-default);
+}
+.footerWH {
+    float: left;
 }
 body {
     margin: 0;
