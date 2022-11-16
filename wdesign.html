@@ -40,7 +40,16 @@
     </div>
 </div>
     <div class="footer">Footer
-        <div id="footWH" class="footerWH"></div>
+        <div class="footerWH">Width: <span id="footW"></span> Height: <span id="footH"></span></div>
+        <script>
+        const windowInnerWidth = document.getElementById("footW");
+            const windowInnerHeight = document.getElementById("footH");
+            function windowSize() {
+                windowInnerWidth.textContent = window.innerWidth;
+                windowInnerHeight.textContent = window.innerHeight;
+            }
+            console.log (windowSize)
+            window.onresize = windowSize;</script>
     </div>
 </body>
 </html>
