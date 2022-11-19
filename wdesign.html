@@ -5,12 +5,23 @@
     <link href="descss.css" rel="stylesheet" />
 </head>
 <body>
+<script>
+
+function replaceText (e){
+    let textToDelete = document.getElementById("text-to-delete").value;
+    console.log(`text-to-delete = ${textToDelete}`);
+    let textForReplace = document.getElementById("text-for-replace");
+    textForReplace.innerText = textForReplace.innerText.replaceAll (textToDelete, "");
+    //debugger;
+};
+</script>
 <div class="header">Header</div>
 <div class="content">
-    <span class="menu">Menu
-        <input type="button" value="BUTTON" class="button">
+    <span class="menu">
+        <p><input id="text-to-delete" type="text" placeholder="Text to delete"></p>Menu
+        <input type="button" onclick="replaceText (event);" value="BUTTON" class="button">
     </span>
-    <div class="article">Анри Барбюс родился  17  мая  1873  года  в  небольшом  городке  Аньере
+    <div id="text-for-replace" class="article">Анри Барбюс родился  17  мая  1873  года  в  небольшом  городке  Аньере
         неподалеку  от  Парижа.  Его  отец,  Адриен  Барбюс,  был   профессиональным
         литератором. Он опубликовал несколько романов, а его пьеса "Дело Коверли"  с
         успехом шла на сценах театров  столицы.  Рано  начал  он  приобщать  сына  к
