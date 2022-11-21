@@ -5,6 +5,9 @@
 * {
     box-sizing: border-box;
 }
+/*.menu, .article, .header, .footer{
+    background-color: aquamarine;
+}*/
 html, body{
     height: 100vh;
     padding: var(--padding-default);
