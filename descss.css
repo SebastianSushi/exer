@@ -39,6 +39,7 @@ html, body{
     background-color: darkgreen;
 }
 .footer {
+    margin-bottom: 5px;
     text-align: right;
     border: dotted black 1px;
     padding: var(--padding-default);

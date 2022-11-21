@@ -9,7 +9,7 @@
 
 function replaceText (e){
     let textToDelete = document.getElementById("text-to-delete").value;
-    console.log(`text-to-delete = ${textToDelete}`);
+    //console.log(`text-to-delete = ${textToDelete}`);
     let textForReplace = document.getElementById("text-for-replace");
     textForReplace.innerText = textForReplace.innerText.replaceAll (textToDelete, "");
     //debugger;
