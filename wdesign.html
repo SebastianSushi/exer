@@ -3,39 +3,34 @@
 <head>
     <title>Web design</title>
     <link href="descss.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 <script>
+    $(document).ready(function(){
+        $("#btnclr").click(function(){
+            $("div").css("background-color", $("#change-color").val())
+        });
+    });
+    //debugger;
+    //coloredBlock classes was removed for task requirements
 
-function changeColor() {
-    let chngColor = document.getElementById("change-color");
-    let blocksToChange = document.getElementsByClassName("coloredBlock");
-    //refers to blocks with special class "coloredBlock"
-    for (var i = 0; i < blocksToChange.length; i++) {
-    blocksToChange[i].style.backgroundColor = chngColor.value;
-};
-    //debugger;
-    //blocksToChange.style.backgroundColor = chngColor.value;
-    //debugger;
-};
+    $(document).ready(function(){
+        $("#btntxt").click(function(){
+            $("#text-for-replace").text($("#text-for-replace").text().replace($("#text-to-delete").val(), ""));
+        });
+    });
 
-function replaceText (e){
-    let textToDelete = document.getElementById("text-to-delete").value;
-    //console.log(`text-to-delete = ${textToDelete}`);
-    let textForReplace = document.getElementById("text-for-replace");
-    textForReplace.innerText = textForReplace.innerText.replaceAll (textToDelete, "");
-    //debugger;
-};
 </script>
-<div class="header coloredBlock">Header</div>
+<div class="header">Header</div>
 <div class="content">
-    <span class="menu coloredBlock">
+    <span class="menu">
         <p><input id="text-to-delete" type="text" placeholder="Text to delete"></p>Menu
-        <input type="button" onclick="replaceText (event);" value="BUTTON" class="button">
+        <input id="btntxt" type="button" value="BUTTON" class="button">
         <p><input type="color" id="change-color"></p>
-        <p><input type="button" onclick="changeColor()" value="Change color" class="button"></p>
+        <p><input id="btnclr" type="button" value="Change color" class="button"></p>
     </span>
-    <div id="text-for-replace" class="article coloredBlock">Анри Барбюс родился  17  мая  1873  года  в  небольшом  городке  Аньере
+    <div id="text-for-replace" class="article">Анри Барбюс родился  17  мая  1873  года  в  небольшом  городке  Аньере
         неподалеку  от  Парижа.  Его  отец,  Адриен  Барбюс,  был   профессиональным
         литератором. Он опубликовал несколько романов, а его пьеса "Дело Коверли"  с
         успехом шла на сценах театров  столицы.  Рано  начал  он  приобщать  сына  к
@@ -66,6 +61,6 @@ function replaceText (e){
         Эмилем Золя и Анатолем Франсом.
         бед, потрясающие драмы, многие тысячи ни в чем не повинных жертв.</div>
 </div>
-    <div id="foot" class="footer coloredBlock">Footer</div>
+    <div id="foot" class="footer">Footer</div>
 </body>
 </html>
