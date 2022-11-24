@@ -4,6 +4,8 @@
     <title>Web design</title>
     <link href="descss.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
 <script>
@@ -26,9 +28,8 @@
 <div class="content">
     <span class="menu">
         <p><input id="text-to-delete" type="text" placeholder="Text to delete"></p>Menu
-        <input id="btntxt" type="button" value="BUTTON" class="button">
-        <p><input type="color" id="change-color"></p>
-        <p><input id="btnclr" type="button" value="Change color" class="button"></p>
+        <input id="btntxt" type="button" value="BUTTON" class="btn btn-secondary">
+        <p><input type="button" value="Change color..." class="btn btn-success" data-toggle="modal" data-target="#myModal"></p>
     </span>
     <div id="text-for-replace" class="article">Анри Барбюс родился  17  мая  1873  года  в  небольшом  городке  Аньере
         неподалеку  от  Парижа.  Его  отец,  Адриен  Барбюс,  был   профессиональным
@@ -62,5 +63,29 @@
         бед, потрясающие драмы, многие тысячи ни в чем не повинных жертв.</div>
 </div>
     <div id="foot" class="footer">Footer</div>
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Change color...</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+                <input type="color" id="change-color">
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal" id="btnclr">Choose</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
 </body>
 </html>
