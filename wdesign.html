@@ -8,7 +8,7 @@
 <body>
 <script>
     $(document).ready(function(){
-        $("#btnclr").click(function(){
+        $("#btnclr").click(()=>{
             $("div").css("background-color", $("#change-color").val())
         });
     });
@@ -16,8 +16,8 @@
     //coloredBlock classes was removed for task requirements
 
     $(document).ready(function(){
-        $("#btntxt").click(function(){
-            $("#text-for-replace").text($("#text-for-replace").text().replace($("#text-to-delete").val(), ""));
+        $("#btntxt").click(()=>{
+            $("#text-for-replace").text($("#text-for-replace").text().replaceAll($("#text-to-delete").val(), ""));
         });
     });
 
