@@ -44,14 +44,10 @@
         <script>
             const windowInnerWidth = document.getElementById("footW");
             const windowInnerHeight = document.getElementById("footH");
-            window.addEventListener("load", wOnLoad);
-            function wOnLoad() {
+            window.addEventListener("load", windowSize);
+            function windowSize() {
                 windowInnerWidth.textContent = window.innerWidth,
                 windowInnerHeight.textContent = window.innerHeight
-            };
-            function windowSize() {
-                windowInnerWidth.textContent = window.innerWidth;
-                windowInnerHeight.textContent = window.innerHeight;
             };
             window.onresize = windowSize;
         </script>
