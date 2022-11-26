@@ -46,10 +46,15 @@ html, body{
     text-align: center;
     cursor: pointer;
     color:white;
-    transition: 3s;
-    background-image: none;
-    background-color: blue;
+    animation: hide 1s;
 }
+
+@keyframes hide {
+    0% {opacity: 1;}
+    99%{visibility: hidden;}
+    100% {opacity: 0;}
+   }
+
 .button {
     height: 20px;
     width: 80px;

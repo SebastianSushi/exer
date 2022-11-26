@@ -1,6 +1,6 @@
 function tearDrop () {
     var tearRed = document.getElementById("drop");
     var invisButton = document.getElementById("buttontear");
-    invisButton.classList.toggle("buttonimginvis");
+    setTimeout(() => invisButton.classList.toggle("buttonimginvis"), 2000);
     tearRed.classList.toggle("tearred");
 }
