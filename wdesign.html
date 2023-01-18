@@ -10,18 +10,45 @@
 <body>
 <script>
     $(document).ready(function(){
+        //$('.toast').toast("show");
         $("#btnclr").click(()=>{
             $("div").css("background-color", $("#change-color").val())
+        });
+        $("#btntxt").click(()=>{
+            showError("!!!");
+            //$("#text-for-replace").text($("#text-for-replace").text().replaceAll($("#text-to-delete").val(), ""));
         });
     });
     //debugger;
     //coloredBlock classes was removed for task requirements
+    function showError (text){
+        $("#error-body").text(text);
+        $("#error").toast("show");
+    };
 
-    $(document).ready(function(){
-        $("#btntxt").click(()=>{
-            $("#text-for-replace").text($("#text-for-replace").text().replaceAll($("#text-to-delete").val(), ""));
-        });
-    });
+    /*$(document).ready(function(){
+         $.get("https://3c341330-50d7-4a8e-8abe-8202b1f6370b.mock.pstmn.io/version", (data, status)=>{
+            if (status == "success"){
+                if (data.hasOwnProperty("version")){
+                    data.version = "01.04.2002";
+                    const verArray = data.version.split(".");
+                    if (parseInt(verArray[0]) > 1){
+
+                    }else{
+                        showError("xxx object =< 1");
+                    }
+                    debugger;
+                }else {
+                    showError("Recieved object has no property 'version'");
+                }
+            } else {
+                showError(`status=${status}, data=${data}`);
+            };
+        }).fail((xhr, textStatus, errorThrown )=>{
+            //debugger;
+            showError(`xhr=${xhr.status}, textStatus=${textStatus}, errorThrown=${errorThrown}`);
+        }); 
+    });*/
 
 </script>
 <div class="header">Header</div>
@@ -31,7 +58,8 @@
         <input id="btntxt" type="button" value="BUTTON" class="btn btn-secondary">
         <p><input type="button" value="Change color..." class="btn btn-success" data-toggle="modal" data-target="#myModal"></p>
     </span>
-    <div id="text-for-replace" class="article">Анри Барбюс родился  17  мая  1873  года  в  небольшом  городке  Аньере
+    <div id="text-for-replace" class="article"> 
+    <div>Анри Барбюс родился  17  мая  1873  года  в  небольшом  городке  Аньере
         неподалеку  от  Парижа.  Его  отец,  Адриен  Барбюс,  был   профессиональным
         литератором. Он опубликовал несколько романов, а его пьеса "Дело Коверли"  с
         успехом шла на сценах театров  столицы.  Рано  начал  он  приобщать  сына  к
@@ -60,7 +88,7 @@
         озабоченность поэта судьбами своих современников,  в  лучших  стихах  бьется
         пытливая, ищущая мысль автора. Не случайно эта  книга  была  замечена  также
         Эмилем Золя и Анатолем Франсом.
-        бед, потрясающие драмы, многие тысячи ни в чем не повинных жертв.</div>
+        бед, потрясающие драмы, многие тысячи ни в чем не повинных жертв.</div></div>
 </div>
     <div id="foot" class="footer">Footer</div>
     <div class="modal" id="myModal">
@@ -87,5 +115,12 @@
           </div>
         </div>
       </div>
+      <div id="error" class="toast" data-autohide="false" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Error</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="error-body"></div>          
+    </div>
 </body>
 </html>
